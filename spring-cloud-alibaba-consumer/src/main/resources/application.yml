@@ -1,0 +1,13 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: server-consumer
+    # =====注册配置中心信息========
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 118.31.63.122:8848
+
+

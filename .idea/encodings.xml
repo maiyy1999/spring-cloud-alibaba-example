@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-sentinel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-albaba-user-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba-integral" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba-server-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-provider/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

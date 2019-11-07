@@ -1,0 +1,6 @@
+FROM openjdk:8
+ENV SENTINEL_HOME /opt/sentinel-dashboard
+RUN mkdir -p ${SENTINEL_HOME}
+COPY sentinel-dashboard-1.6.3.jar ${SENTINEL_HOME}
+RUN chmod 777 sentinel-dashboard-1.6.3.jar
+CMD ["java" ,"-jar",]"sentinel-dashboard-1.6.3.jar"

@@ -1,0 +1,11 @@
+vesion: "3"
+services:
+  sentinel-dashboard:
+    build: ./
+    ports:
+      - 8178:8080
+    environment:
+      - JAVA_OPTS=-Dserver.port=8080 -Dcsp.sentinel.dashboard.server=118.31.63.122:8080 -Dproject.name=sentinel-dashboard
+    volumes:
+      - /opt/sentinel-dashboard/logs:/root/logs
+

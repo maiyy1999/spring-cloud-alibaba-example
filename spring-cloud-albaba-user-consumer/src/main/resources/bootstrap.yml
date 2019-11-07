@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: server-user-consumer
+  profiles:
+    active: pro
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 118.31.63.122:8848
+      config:
+        #  配置中心的地址
+        server-addr: 118.31.63.122:8848
+        #  配置文件的后缀名
+        file-extension: yml
+        refreshable-dataids: false

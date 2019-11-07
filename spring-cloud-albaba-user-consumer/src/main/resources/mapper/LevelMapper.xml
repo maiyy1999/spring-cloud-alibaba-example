@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springcloudalibabafeign.userconsumer.mapper.LevelMapper">
+  <resultMap id="BaseResultMap" type="com.springcloudalibabafeign.userconsumer.domain.entity.Level">
+    <!--@mbg.generated-->
+    <id column="level_id" jdbcType="INTEGER" property="levelId" />
+    <result column="grade" jdbcType="BOOLEAN" property="grade" />
+    <result column="start_scope" jdbcType="INTEGER" property="startScope" />
+    <result column="end_scope" jdbcType="INTEGER" property="endScope" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    level_id, grade, start_scope, end_scope
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from level
+    where level_id = #{levelId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from level
+    where level_id = #{levelId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="level_id" keyProperty="levelId" parameterType="com.springcloudalibabafeign.userconsumer.domain.entity.Level" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into level (grade, start_scope, end_scope
+      )
+    values (#{grade,jdbcType=BOOLEAN}, #{startScope,jdbcType=INTEGER}, #{endScope,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="level_id" keyProperty="levelId" parameterType="com.springcloudalibabafeign.userconsumer.domain.entity.Level" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into level
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="grade != null">
+        grade,
+      </if>
+      <if test="startScope != null">
+        start_scope,
+      </if>
+      <if test="endScope != null">
+        end_scope,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="grade != null">
+        #{grade,jdbcType=BOOLEAN},
+      </if>
+      <if test="startScope != null">
+        #{startScope,jdbcType=INTEGER},
+      </if>
+      <if test="endScope != null">
+        #{endScope,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springcloudalibabafeign.userconsumer.domain.entity.Level">
+    <!--@mbg.generated-->
+    update level
+    <set>
+      <if test="grade != null">
+        grade = #{grade,jdbcType=BOOLEAN},
+      </if>
+      <if test="startScope != null">
+        start_scope = #{startScope,jdbcType=INTEGER},
+      </if>
+      <if test="endScope != null">
+        end_scope = #{endScope,jdbcType=INTEGER},
+      </if>
+    </set>
+    where level_id = #{levelId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springcloudalibabafeign.userconsumer.domain.entity.Level">
+    <!--@mbg.generated-->
+    update level
+    set grade = #{grade,jdbcType=BOOLEAN},
+      start_scope = #{startScope,jdbcType=INTEGER},
+      end_scope = #{endScope,jdbcType=INTEGER}
+    where level_id = #{levelId,jdbcType=INTEGER}
+  </update>
+    <select id="selectByScope" resultType="int">
+      select
+      level_id, grade, start_scope, end_scope
+      from level where #{scope} between start_scope and  end_scope
+    </select>
+</mapper>

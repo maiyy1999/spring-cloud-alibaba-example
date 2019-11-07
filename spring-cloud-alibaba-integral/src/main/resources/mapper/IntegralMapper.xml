@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springcloudalibaba.integral.mapper.IntegralMapper">
+  <resultMap id="BaseResultMap" type="com.springcloudalibaba.integral.entity.Integral">
+    <!--@mbg.generated-->
+    <id column="integral_id" jdbcType="INTEGER" property="integralId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="integral_count" jdbcType="INTEGER" property="integralCount" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    integral_id, user_id, integral_count
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from integral
+    where integral_id = #{integralId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from integral
+    where integral_id = #{integralId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="integral_id" keyProperty="integralId" parameterType="com.springcloudalibaba.integral.entity.Integral" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into integral (user_id, integral_count)
+    values (#{userId,jdbcType=INTEGER}, #{integralCount,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="integral_id" keyProperty="integralId" parameterType="com.springcloudalibaba.integral.entity.Integral" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into integral
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="integralCount != null">
+        integral_count,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="integralCount != null">
+        #{integralCount,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springcloudalibaba.integral.entity.Integral">
+    <!--@mbg.generated-->
+    update integral
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="integralCount != null">
+        integral_count = #{integralCount,jdbcType=INTEGER},
+      </if>
+    </set>
+    where integral_id = #{integralId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springcloudalibaba.integral.entity.Integral">
+    <!--@mbg.generated-->
+    update integral
+    set user_id = #{userId,jdbcType=INTEGER},
+      integral_count = #{integralCount,jdbcType=INTEGER}
+    where integral_id = #{integralId,jdbcType=INTEGER}
+  </update>
+  <select id="selectCountByUserId" resultType="com.springcloudalibaba.integral.entity.Integral">
+    select integral_id, user_id, integral_count
+    from integral where user_id=#{userId}
+  </select>
+</mapper>

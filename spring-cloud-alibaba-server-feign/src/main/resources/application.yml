@@ -1,0 +1,13 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: server-feign
+    # =====\u6CE8\u518C\u914D\u7F6E\u4E2D\u5FC3\u4FE1\u606F========
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 118.31.63.122:8848
+
+

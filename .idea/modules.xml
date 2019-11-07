@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/server-sentinel/server-sentinel.iml" filepath="$PROJECT_DIR$/server-sentinel/server-sentinel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-albaba-user-consumer/spring-cloud-albaba-user-consumer.iml" filepath="$PROJECT_DIR$/spring-cloud-albaba-user-consumer/spring-cloud-albaba-user-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba-consumer/spring-cloud-alibaba-consumer.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba-consumer/spring-cloud-alibaba-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba-example.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba-integral/spring-cloud-alibaba-integral.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba-integral/spring-cloud-alibaba-integral.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba-server-feign/spring-cloud-alibaba-server-feign.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba-server-feign/spring-cloud-alibaba-server-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-provider/spring-cloud-provider.iml" filepath="$PROJECT_DIR$/spring-cloud-provider/spring-cloud-provider.iml" />
+    </modules>
+  </component>
+</project>
